@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "css": "@tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +13,6 @@
   "type": "commonjs",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "lucide": "^1.32.0",
     "tailwindcss": "^4.3.3"
   }
 }
