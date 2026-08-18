@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=League+Script&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <!-- GOOGLE FONTS LINK -->
+
+    <title>GojoTech</title>
+
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body>
+    <header class="border-b-8 border-[#111d4a] bg-[#ffd4d4]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-18 items-center justify-between">
+          <!-- LOGO -->
+
+          <a href="#" class="text-xl font-bold tracking-tight text-[#61210f]">
+            GojoTech
+          </a>
+
+          <!-- Desktop Navigation -->
+
+          <nav
+            class="hidden md:flex items-center gap-8"
+            aria-label="Main navigation"
+          >
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              Home
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              Products
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              Categories
+            </a>
+          </nav>
+
+          <!-- Actions -->
+
+          <div class="flex items-center gap-8">
+            <!-- SEARCH -->
+            <button
+              type="button"
+              aria-label="Search"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="search" class="h-5 w-5"></i>
+            </button>
+
+            <!-- Wishlist -->
+            <button
+              type="button"
+              aria-label="wishlist"
+              class="text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="heart" class="h-5 w-5"></i>
+            </button>
+
+            <!-- CART -->
+
+            <button
+              type="button"
+              aria-label="Shopping cart"
+              class="relative text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+              <span
+                class="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#ffd4d4] px-1 text-[10px] font-semibold text-[#61210f]"
+              >
+                3
+              </span>
+            </button>
+
+            <!-- ACCOUNT -->
+            <button
+              type="button"
+              aria-label="Account"
+              class="text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="user" class="h-5 w-5"></i>
+            </button>
+          </div>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button
+            type="button"
+            aria-label="Open menu"
+            id="mobile-menu-button"
+            aria-expanded="false"
+            class="md:hidden text-[#61210f]"
+          >
+            <i data-lucide="menu" class="h-7 w-7"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="hidden border-t border-[#111d4a] md:hidden">
+        <nav
+          class="mx-auto max-w-7xl px-4 py-4 sm:px-6"
+          aria-label="Mobile navigation"
+        >
+          <div class="flex flex-col gap-4">
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] hover:text-slate-900"
+            >
+              Home
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] hover:text-slate-900"
+            >
+              Products
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] hover:text-slate-900"
+            >
+              Categories
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Lucide Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!-- MOBILE-MENU SCRIPT -->
+    <script src="./src/js/mobile-menu.js"></script>
+  </body>
+</html>
