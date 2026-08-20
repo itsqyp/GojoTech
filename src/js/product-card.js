@@ -6,7 +6,7 @@ function renderProductCard(product) {
 
             <!-- Product Image -->
             <a
-                href="#"
+                href="./product.html?id=${product.id}"
                 class="block overflow-hidden bg-slate-100"
             >
                 <img
