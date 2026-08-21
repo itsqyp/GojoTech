@@ -87,10 +87,11 @@ function renderProductDetails(product) {
                 <!-- Actions -->
                 <div class="mt-8 flex flex-col gap-3 sm:flex-row">
 
-                    <button
-                        type="button"
-                        class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-indigo-700"
-                    >
+                   <button
+    type="button"
+    data-add-to-cart="${product.id}"
+    class="flex flex-1 items-center justify-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-indigo-700"
+>
                         <i
                             data-lucide="shopping-cart"
                             class="h-5 w-5"

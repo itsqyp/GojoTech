@@ -86,9 +86,10 @@
             >
               <i data-lucide="shopping-cart" class="h-5 w-5"></i>
               <span
-                class="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-[#ffd4d4] px-1 text-[10px] font-semibold text-[#61210f]"
+                data-cart-count
+                class="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-indigo-600 px-1 text-[10px] font-semibold text-white"
               >
-                3
+                0
               </span>
             </button>
 
@@ -396,8 +397,16 @@
     <!-- MOBILE-MENU SCRIPT -->
 
     <script src="./src/data/products.js"></script>
+    <script src="./src/js/toast.js"></script>
+    <script src="./src/js/cart.js"></script>
+
     <script src="./src/js/product-card.js"></script>
     <script src="./src/js/featured-products.js"></script>
+
     <script src="./src/js/mobile-menu.js"></script>
+    <script>
+      lucide.createIcons();
+      updateCartCount();
+    </script>
   </body>
 </html>
