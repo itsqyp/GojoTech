@@ -38,6 +38,7 @@ function renderProducts(productsToRender) {
     .join("");
 
   lucide.createIcons();
+  updateWishlistButtons();
 }
 
 function applyFilters() {

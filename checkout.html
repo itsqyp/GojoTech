@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Checkout | GojoTech</title>
+
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+
+  <body class="bg-slate-50 text-slate-900">
+    <!-- Navbar -->
+    <header class="border-b border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a
+            href="./index.html"
+            class="text-xl font-bold tracking-tight text-slate-900"
+          >
+            GojoTech
+          </a>
+
+          <div class="flex items-center gap-2 text-sm text-slate-500">
+            <i data-lucide="lock" class="h-4 w-4"></i>
+
+            Secure Checkout
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="bg-white border-b border-slate-200">
+        <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <p class="text-sm font-semibold text-indigo-600">Almost there</p>
+
+          <h1 class="mt-2 text-3xl font-bold tracking-tight">Checkout</h1>
+        </div>
+      </section>
+
+      <!-- Checkout -->
+      <section>
+        <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+          <form id="checkout-form" class="grid gap-8 lg:grid-cols-[1fr_380px]">
+            <!-- Left -->
+            <div class="space-y-8">
+              <!-- Contact -->
+              <div class="rounded-xl border border-slate-200 bg-white p-6">
+                <h2 class="text-lg font-semibold">Contact Information</h2>
+
+                <div class="mt-6 grid gap-5">
+                  <div>
+                    <label
+                      for="email"
+                      class="text-sm font-medium text-slate-700"
+                    >
+                      Email Address
+                    </label>
+
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                      class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                      placeholder="you@example.com"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Shipping -->
+              <div class="rounded-xl border border-slate-200 bg-white p-6">
+                <h2 class="text-lg font-semibold">Shipping Information</h2>
+
+                <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                  <div class="sm:col-span-2">
+                    <label
+                      for="full-name"
+                      class="text-sm font-medium text-slate-700"
+                    >
+                      Full Name
+                    </label>
+
+                    <input
+                      id="full-name"
+                      name="fullName"
+                      type="text"
+                      autocomplete="name"
+                      required
+                      class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                      placeholder="John Doe"
+                    />
+                  </div>
+
+                  <div class="sm:col-span-2">
+                    <label
+                      for="address"
+                      class="text-sm font-medium text-slate-700"
+                    >
+                      Address
+                    </label>
+
+                    <input
+                      id="address"
+                      name="address"
+                      type="text"
+                      autocomplete="street-address"
+                      required
+                      class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                      placeholder="123 Main Street"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="city"
+                      class="text-sm font-medium text-slate-700"
+                    >
+                      City
+                    </label>
+
+                    <input
+                      id="city"
+                      name="city"
+                      type="text"
+                      autocomplete="address-level2"
+                      required
+                      class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      for="postal-code"
+                      class="text-sm font-medium text-slate-700"
+                    >
+                      Postal Code
+                    </label>
+
+                    <input
+                      id="postal-code"
+                      name="postalCode"
+                      type="text"
+                      autocomplete="postal-code"
+                      required
+                      class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Payment -->
+              <div class="rounded-xl border border-slate-200 bg-white p-6">
+                <h2 class="text-lg font-semibold">Payment Method</h2>
+
+                <div class="mt-6 space-y-3">
+                  <label
+                    class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-4 hover:bg-slate-50"
+                  >
+                    <input type="radio" name="payment" value="card" checked />
+
+                    <div class="flex-1">
+                      <p class="text-sm font-medium">Credit / Debit Card</p>
+
+                      <p class="mt-1 text-xs text-slate-500">
+                        Secure card payment
+                      </p>
+                    </div>
+
+                    <i
+                      data-lucide="credit-card"
+                      class="h-5 w-5 text-slate-400"
+                    ></i>
+                  </label>
+
+                  <label
+                    class="flex cursor-pointer items-center gap-3 rounded-lg border border-slate-200 p-4 hover:bg-slate-50"
+                  >
+                    <input type="radio" name="payment" value="cash" />
+
+                    <div class="flex-1">
+                      <p class="text-sm font-medium">Cash on Delivery</p>
+
+                      <p class="mt-1 text-xs text-slate-500">
+                        Pay when your order arrives
+                      </p>
+                    </div>
+
+                    <i
+                      data-lucide="banknote"
+                      class="h-5 w-5 text-slate-400"
+                    ></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Summary -->
+            <aside
+              id="checkout-summary"
+              class="h-fit rounded-xl border border-slate-200 bg-white p-6"
+            ></aside>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script src="./src/data/products.js"></script>
+    <script src="./src/js/toast.js"></script>
+    <script src="./src/js/cart.js"></script>
+    <script src="./src/js/checkout.js"></script>
+
+    <script>
+      lucide.createIcons();
+      updateCartCount();
+    </script>
+  </body>
+</html>

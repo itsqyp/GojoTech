@@ -100,16 +100,18 @@ function renderProductDetails(product) {
                         Add to Cart
                     </button>
 
-                    <button
-                        type="button"
-                        aria-label="Add to wishlist"
-                        class="flex items-center justify-center rounded-lg border border-slate-300 px-5 py-3 text-slate-700 transition-colors hover:bg-slate-50"
-                    >
-                        <i
-                            data-lucide="heart"
-                            class="h-5 w-5"
-                        ></i>
-                    </button>
+                   <button
+    type="button"
+    data-wishlist="${product.id}"
+    aria-label="Add ${product.name} to wishlist"
+    class="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-red-500"
+>
+    <i
+        data-lucide="heart"
+        data-wishlist-icon
+        class="h-5 w-5"
+    ></i>
+</button>
 
                 </div>
 
@@ -117,6 +119,8 @@ function renderProductDetails(product) {
 
         </div>
     `;
+  lucide.createIcons();
+  updateWishlistButtons();
 }
 
 if (!product) {

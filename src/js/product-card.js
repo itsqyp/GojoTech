@@ -49,13 +49,18 @@ function renderProductCard(product) {
                         $${product.price.toLocaleString()}
                     </p>
 
-                    <button
-                        type="button"
-                        aria-label="Add ${product.name} to wishlist"
-                        class="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-red-500"
-                    >
-                        <i data-lucide="heart" class="h-5 w-5"></i>
-                    </button>
+                  <button 
+    type="button"
+    data-wishlist="${product.id}"
+    aria-label="Add ${product.name} to wishlist"
+    class="rounded-full p-2 text-slate-500 transition-colors hover:bg-slate-100 hover:text-red-500"
+>
+    <i
+        data-lucide="heart"
+        data-wishlist-icon
+        class="h-5 w-5"
+    ></i>
+</button>
 
                 </div>
 

@@ -172,12 +172,12 @@ function renderCart() {
 
             </div>
 
-            <button
-                type="button"
-                class="mt-6 w-full rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white transition-colors hover:bg-indigo-700"
-            >
-                Checkout
-            </button>
+            <a
+    href="./checkout.html"
+    class="mt-6 block w-full rounded-lg bg-indigo-600 px-5 py-3 text-center font-semibold text-white transition-colors hover:bg-indigo-700"
+>
+    Checkout
+</a>
 
             <a
                 href="./products.html"
