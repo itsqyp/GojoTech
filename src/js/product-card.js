@@ -1,3 +1,37 @@
+function renderRatingStars(rating) {
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 >= 0.5;
+
+  let stars = "";
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= fullStars) {
+      stars += `
+        <i
+          data-lucide="star"
+          class="h-4 w-4 fill-current"
+        ></i>
+      `;
+    } else if (i === fullStars + 1 && hasHalfStar) {
+      stars += `
+        <i
+          data-lucide="star-half"
+          class="h-4 w-4 fill-current"
+        ></i>
+      `;
+    } else {
+      stars += `
+        <i
+          data-lucide="star"
+          class="h-4 w-4"
+        ></i>
+      `;
+    }
+  }
+
+  return stars;
+}
+
 function renderProductCard(product) {
   return `
         <article
@@ -5,16 +39,32 @@ function renderProductCard(product) {
         >
 
             <!-- Product Image -->
-            <a
-                href="./product.html?id=${product.id}"
-                class="block overflow-hidden bg-slate-100"
-            >
-                <img
-                    src="${product.image}"
-                    alt="${product.name}"
-                    class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+           <div class="relative overflow-hidden bg-slate-100">
+
+    <a
+        href="./product.html?id=${product.id}"
+        class="block"
+    >
+        <img
+            src="${product.image}"
+            alt="${product.name}"
+            class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+        >
+    </a>
+
+    ${
+      product.featured
+        ? `
+                <span
+                    class="absolute left-3 top-3 rounded-full bg-slate-900 px-3 py-1 text-xs font-semibold text-white"
                 >
-            </a>
+                    Featured
+                </span>
+            `
+        : ""
+    }
+
+</div>
 
             <!-- Product Information -->
             <div class="p-5">
@@ -30,17 +80,17 @@ function renderProductCard(product) {
                 </h3>
 
                 <!-- Rating -->
-                <div class="mt-2 flex items-center gap-2">
+               <div class="mt-2 flex items-center gap-2">
 
-                    <div class="flex items-center text-amber-500">
-                        <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                    </div>
+    <div class="flex items-center text-amber-500">
+        ${renderRatingStars(product.rating)}
+    </div>
 
-                    <span class="text-sm text-slate-600">
-                        ${product.rating}
-                    </span>
+    <span class="text-sm text-slate-600">
+        ${product.rating}
+    </span>
 
-                </div>
+</div>
 
                 <!-- Price + Wishlist -->
                 <div class="mt-4 flex items-center justify-between">

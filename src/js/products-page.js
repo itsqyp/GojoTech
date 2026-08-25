@@ -4,8 +4,26 @@ const productCount = document.querySelector("#product-count");
 const sortSelect = document.querySelector("#sort-products");
 const categoryButtons = document.querySelectorAll(".category-filter");
 
+// New feature
+const clearFiltersContainer = document.querySelector(
+  "#clear-filters-container",
+);
+const clearFiltersButton = document.querySelector("#clear-filters");
+
 let currentCategory = "all";
 let currentSort = "featured";
+
+function updateClearFiltersButton() {
+  const hasSearch = searchInput.value.trim() !== "";
+
+  const hasCategory = currentCategory !== "all";
+
+  if (hasSearch || hasCategory) {
+    clearFiltersContainer.classList.remove("hidden");
+  } else {
+    clearFiltersContainer.classList.add("hidden");
+  }
+}
 function renderProducts(productsToRender) {
   productCount.textContent = `${productsToRender.length} ${
     productsToRender.length === 1 ? "product" : "products"
@@ -121,3 +139,39 @@ sortSelect.addEventListener("change", () => {
 });
 
 renderProducts(products);
+
+updateClearFiltersButton();
+
+clearFiltersButton.addEventListener("click", () => {
+  searchInput.value = "";
+
+  currentCategory = "all";
+
+  categoryButtons.forEach((button) => {
+    button.classList.remove("bg-slate-900", "text-white");
+
+    button.classList.add(
+      "border",
+      "border-slate-300",
+      "bg-white",
+      "text-slate-600",
+    );
+  });
+
+  const allButton = document.querySelector('[data-category="all"]');
+
+  allButton.classList.remove(
+    "border",
+    "border-slate-300",
+    "bg-white",
+    "text-slate-600",
+  );
+
+  allButton.classList.add("bg-slate-900", "text-white");
+
+  sortSelect.value = "featured";
+
+  currentSort = "featured";
+
+  applyFilters();
+});

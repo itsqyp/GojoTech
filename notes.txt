@@ -4,3 +4,133 @@ ffd4d4 cotton rose
 a03e99 grape soda
 111d4a space indigo
 lol
+
+<header class="border-b-8 border-[#111d4a] bg-[#ffd4d4]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-18 items-center justify-between">
+          <!-- LOGO -->
+
+          <a href="#" class="text-xl font-bold tracking-tight text-[#61210f]">
+            GojoTech
+          </a>
+
+          <!-- Desktop Navigation -->
+
+          <nav
+            class="hidden md:flex items-center gap-8"
+            aria-label="Main navigation"
+          >
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              Home
+            </a>
+
+            <a
+              href="./products.html"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              Products
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              Categories
+            </a>
+          </nav>
+
+          <!-- Actions -->
+
+          <div class="flex items-center gap-8">
+            <!-- SEARCH -->
+            <button
+              type="button"
+              aria-label="Search"
+              class="text-sm font-medium text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="search" class="h-5 w-5"></i>
+            </button>
+
+            <!-- Wishlist -->
+            <a
+              href="./wishlist.html"
+              aria-label="Wishlist"
+              class="text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="heart" class="h-5 w-5"></i>
+            </a>
+
+            <!-- CART -->
+
+            <a
+              href="./cart.html"
+              aria-label="Shopping cart"
+              class="relative text-slate-600 hover:text-slate-900"
+            >
+              <i data-lucide="shopping-cart" class="h-5 w-5"></i>
+
+              <span
+                data-cart-count
+                class="absolute -right-2 -top-2 flex h-4 min-w-4 items-center justify-center rounded-full bg-indigo-600 px-1 text-[10px] font-semibold text-white"
+              >
+                0
+              </span>
+            </a>
+
+            <!-- ACCOUNT -->
+            <button
+              type="button"
+              aria-label="Account"
+              class="text-[#61210f] transition-colors hover:text-slate-900"
+            >
+              <i data-lucide="user" class="h-5 w-5"></i>
+            </button>
+          </div>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button
+            type="button"
+            aria-label="Open menu"
+            id="mobile-menu-button"
+            aria-expanded="false"
+            class="md:hidden text-[#61210f]"
+          >
+            <i data-lucide="menu" class="h-7 w-7"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div id="mobile-menu" class="hidden border-t border-[#111d4a] md:hidden">
+        <nav
+          class="mx-auto max-w-7xl px-4 py-4 sm:px-6"
+          aria-label="Mobile navigation"
+        >
+          <div class="flex flex-col gap-4">
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] hover:text-slate-900"
+            >
+              Home
+            </a>
+
+            <a
+              href="./products.html"
+              class="text-sm font-medium text-[#61210f] hover:text-slate-900"
+            >
+              Products
+            </a>
+
+            <a
+              href="#"
+              class="text-sm font-medium text-[#61210f] hover:text-slate-900"
+            >
+              Categories
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
