@@ -8,13 +8,14 @@
     <title>Product | GojoTech</title>
 
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
   </head>
 
   <body class="bg-white text-slate-900">
     <!-- Navbar -->
-    <header id="site-header"></header>
+    <header id="site-header" data-aos="fade-up"></header>
 
-    <main>
+    <main data-aos="fade-up">
       <!-- Product Details -->
       <section>
         <div
@@ -23,7 +24,15 @@
         ></div>
       </section>
     </main>
-
+    <footer id="site-footer" data-aos="fade-up"></footer>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        offset: 80,
+      });
+    </script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script src="./src/data/products.js"></script>
@@ -34,7 +43,7 @@
     <script src="./src/js/product-details.js"></script>
     <script src="./src/js/mobile-menu.js"></script>
     <script src="./src/js/navbar.js"></script>
-
+    <script src="./src/js/footer.js"></script>
     <script>
       lucide.createIcons();
       updateCartCount();

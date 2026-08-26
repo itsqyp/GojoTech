@@ -16,13 +16,14 @@
     />
 
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
   </head>
 
   <body class="font-sans text-slate-900">
     <!-- Navbar -->
-    <header id="site-header"></header>
+    <header id="site-header" data-aos="fade-up"></header>
 
-    <main>
+    <main data-aos="fade-up">
       <!-- Products Header -->
       <section class="bg-slate-50">
         <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -180,6 +181,16 @@
         </div>
       </section>
     </main>
+    <footer id="site-footer" data-aos="fade-up"></footer>
+
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        offset: 80,
+      });
+    </script>
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -191,6 +202,7 @@
     <script src="./src/js/products-page.js"></script>
     <script src="./src/js/mobile-menu.js"></script>
     <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/footer.js"></script>
 
     <script>
       lucide.createIcons();

@@ -8,13 +8,14 @@
     <title>Checkout | GojoTech</title>
 
     <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
   </head>
 
   <body class="bg-slate-50 text-slate-900">
     <!-- Navbar -->
-    <header id="site-header"></header>
+    <header id="site-header" data-aos="fade-up"></header>
 
-    <main>
+    <main data-aos="fade-up">
       <!-- Page Header -->
       <section class="bg-white border-b border-slate-200">
         <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -25,7 +26,7 @@
       </section>
 
       <!-- Checkout -->
-      <section>
+      <section data-aos="fade-up">
         <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <form id="checkout-form" class="grid gap-8 lg:grid-cols-[1fr_380px]">
             <!-- Left -->
@@ -192,6 +193,16 @@
         </div>
       </section>
     </main>
+    <footer id="site-footer" data-aos="fade-up"></footer>
+
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        offset: 80,
+      });
+    </script>
 
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -200,7 +211,7 @@
     <script src="./src/js/cart.js"></script>
     <script src="./src/js/checkout.js"></script>
     <script src="./src/js/navbar.js"></script>
-
+    <script src="./src/js/footer.js"></script>
     <script>
       lucide.createIcons();
       updateCartCount();

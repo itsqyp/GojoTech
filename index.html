@@ -12,19 +12,19 @@
       rel="stylesheet"
     />
     <!-- GOOGLE FONTS LINK -->
-
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
     <title>GojoTech</title>
 
     <link rel="stylesheet" href="./src/output.css" />
   </head>
   <body>
     <!-- HEADER SECTION -->
-    <header id="site-header"></header>
+    <header id="site-header" data-aos="fade-up"></header>
     <!--HERO SECTION-->
 
     <main>
       <!-- Hero -->
-      <section class="relative overflow-hidden bg-[#f2dc5d]">
+      <section class="relative overflow-hidden bg-[#f2dc5d]" data-aos="fade-up">
         <div
           class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-28"
         >
@@ -86,7 +86,7 @@
       </section>
 
       <!-- Featured Categories -->
-      <section class="bg-[#111d4a]">
+      <section class="bg-[#111d4a]" data-aos="fade-up">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <!-- Section Header -->
           <div class="max-w-2xl">
@@ -218,7 +218,7 @@
       </section>
 
       <!-- Featured Products -->
-      <section class="bg-slate-50">
+      <section class="bg-slate-50" data-aos="fade-up">
         <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <!-- Section Header -->
           <div
@@ -259,8 +259,18 @@
         </div>
       </section>
     </main>
+    <footer id="site-footer" data-aos="fade-up"></footer>
 
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        once: true,
+        offset: 80,
+      });
+    </script>
     <!-- Lucide Script -->
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       lucide.createIcons();
@@ -277,6 +287,7 @@
 
     <script src="./src/js/mobile-menu.js"></script>
     <script src="./src/js/navbar.js"></script>
+    <script src="./src/js/footer.js"></script>
     <script>
       lucide.createIcons();
       updateCartCount();
