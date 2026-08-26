@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="./node_modules/lenis/dist/lenis.css" />
   </head>
 
   <body class="min-h-screen bg-slate-50 text-slate-900">
@@ -28,6 +29,17 @@
       </section>
     </main>
     <footer id="site-footer" data-aos="fade-up"></footer>
+    <script src="./node_modules/lenis/dist/lenis.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
     <script src="./node_modules/aos/dist/aos.js"></script>
     <script>
       AOS.init({

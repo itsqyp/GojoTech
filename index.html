@@ -13,6 +13,7 @@
     />
     <!-- GOOGLE FONTS LINK -->
     <link rel="stylesheet" href="./node_modules/aos/dist/aos.css" />
+    <link rel="stylesheet" href="./node_modules/lenis/dist/lenis.css" />
     <title>GojoTech</title>
 
     <link rel="stylesheet" href="./src/output.css" />
@@ -260,6 +261,18 @@
       </section>
     </main>
     <footer id="site-footer" data-aos="fade-up"></footer>
+
+    <script src="./node_modules/lenis/dist/lenis.js"></script>
+    <script>
+      const lenis = new Lenis();
+
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
 
     <script src="./node_modules/aos/dist/aos.js"></script>
     <script>
