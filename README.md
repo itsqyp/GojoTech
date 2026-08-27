@@ -112,40 +112,6 @@ No frontend framework is used.
 
 ---
 
-## Project Structure
-
-```text
-GojoTech/
-│
-├── index.html
-├── products.html
-├── product.html
-├── cart.html
-├── wishlist.html
-├── checkout.html
-├── order-success.html
-│
-├── src/
-│   │
-│   ├── data/
-│   │   └── products.js
-│   │
-│   ├── js/
-│   │   ├── cart.js
-│   │   ├── cart-page.js
-│   │   ├── footer.js
-│   │   ├── mobile-menu.js
-│   │   ├── product-card.js
-│   │   └── ...
-│   │
-│   ├── input.css
-│   └── output.css
-│
-├── package.json
-├── package-lock.json
-└── README.md
-```
-
 ### Author
 
 Abir Bro.
