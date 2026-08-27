@@ -112,6 +112,14 @@ No frontend framework is used.
 
 ---
 
+## Basic Link
+
+Link - https://gojotechabir.netlify.app/
+
+### Disclaimer
+
+I am not done with this project. I want to implement so many more things.
+
 ### Author
 
 Abir Bro.
